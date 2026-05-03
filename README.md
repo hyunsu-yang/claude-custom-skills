@@ -8,6 +8,7 @@ Claude Code에서 사용하는 커스텀 스킬 모음.
 skills/
   global/              # ~/.claude/skills/ 에 설치 (모든 프로젝트에서 사용)
     architecture-refactor/
+    yt-subtitle/
   tradingapp/          # 프로젝트 .claude/skills/ 에 설치 (해당 프로젝트에서만 사용)
     strategy-backtest/
     strategy-backtest-v2/
@@ -37,6 +38,7 @@ bash install.sh --project tradingapp /path/to/tradingapp
 | 스킬 | 설명 |
 |------|------|
 | `architecture-refactor` | 크로스 모듈 중복 탐지 + 단계별 리팩토링 (Scan → Report → Plan → Execute → Verify) |
+| `yt-subtitle` | YouTube URL에서 자막 추출 및 요약 (`yt-dlp` 필요) |
 
 ### TradingApp
 
