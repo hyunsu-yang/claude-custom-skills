@@ -8,6 +8,7 @@ Claude Code에서 사용하는 커스텀 스킬 모음.
 skills/
   global/              # ~/.claude/skills/ 에 설치 (모든 프로젝트에서 사용)
     architecture-refactor/
+    c4-model/
     yt-subtitle/
   tradingapp/          # 프로젝트 .claude/skills/ 에 설치 (해당 프로젝트에서만 사용)
     strategy-backtest/
@@ -42,6 +43,7 @@ bash install.sh --project tradingapp /path/to/tradingapp
 | 스킬 | 설명 |
 |------|------|
 | `architecture-refactor` | 크로스 모듈 중복 탐지 + 단계별 리팩토링 (Scan → Report → Plan → Execute → Verify) |
+| `c4-model` | 코드베이스/산문 → C4 아키텍처 문서 (Mermaid·Structurizr·PlantUML). 5개 모드 — 신규 설계 / 기존 레포 역문서화 / 리뷰 / 갱신. **외부 유래** → [PROVENANCE.md](skills/global/c4-model/PROVENANCE.md) |
 | `yt-subtitle` | YouTube URL에서 자막 추출 및 요약 (`yt-dlp` 필요) |
 
 ### TradingApp
