@@ -16,6 +16,10 @@ skills/
     strategy-improvement/
     strategy-improvement-v2/
     system-check/
+  stockapp/            # stockapp 프로젝트 전용
+    strategy-backtest/
+    strategy-improvement/
+    system-check/
 ```
 
 ## 설치
@@ -50,3 +54,11 @@ bash install.sh --project tradingapp /path/to/tradingapp
 | `strategy-improvement` | V1 데이터 기반 전략 개선 워크플로우 |
 | `strategy-improvement-v2` | V2/V3/V4 전략 개선 워크플로우 |
 | `system-check` | 자동매매 시스템 전체 상태 점검 |
+
+### StockApp (한국 주식 자동매매)
+
+| 스킬 | 설명 |
+|------|------|
+| `strategy-backtest` | eBest t8412 과거 5분봉 수집 + 조건별 진입 시뮬레이션 |
+| `strategy-improvement` | 로그 분석 → 백테스트 → 파라미터 조정 → 적용 워크플로우 |
+| `system-check` | 서버·세션·사이클·포지션·에러 종합 진단 리포트 |

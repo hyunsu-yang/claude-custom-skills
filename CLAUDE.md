@@ -6,6 +6,7 @@
 skills/
   global/       → installed to ~/.claude/skills/ (all projects)
   tradingapp/   → installed to <project>/.claude/skills/ (project-specific)
+  stockapp/     → installed to <project>/.claude/skills/ (project-specific)
 ```
 
 ## Install

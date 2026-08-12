@@ -70,6 +70,7 @@ case "${1:-all}" in
     echo "Global skills installed."
     echo "To install project skills, run:"
     echo "  bash install.sh --project tradingapp /path/to/tradingapp"
+    echo "  bash install.sh --project stockapp /path/to/stockapp"
     ;;
   *)
     echo "Usage:"
