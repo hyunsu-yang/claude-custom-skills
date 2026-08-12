@@ -5,6 +5,9 @@ Claude Code에서 사용하는 커스텀 스킬 모음.
 ## 구조
 
 ```
+commands/              # ~/.claude/commands/ 에 설치 (슬래시 커맨드)
+  arch-doc.md
+  c4.md
 skills/
   global/              # ~/.claude/skills/ 에 설치 (모든 프로젝트에서 사용)
     architecture-refactor/
@@ -26,15 +29,28 @@ skills/
 ## 설치
 
 ```bash
-# 전체 설치
+# 전체 설치 (글로벌 스킬 + 커맨드)
 bash install.sh
 
-# 글로벌 스킬만
+# 글로벌 스킬 + 커맨드
 bash install.sh --global
+
+# 슬래시 커맨드만
+bash install.sh --commands
 
 # 특정 프로젝트 스킬만
 bash install.sh --project tradingapp /path/to/tradingapp
 ```
+
+## 슬래시 커맨드
+
+| 커맨드 | 설명 |
+|--------|------|
+| `/arch-doc` | 코드베이스 → 아키텍처 문서 (C4 + Mermaid). `c4-model` 스킬 진입점 |
+| `/c4` | `/arch-doc` 별칭 — 기억나는 이름 아무거나 |
+
+`~/.claude/commands/`에 이 레포가 관리하지 않는 실물 파일이 있으면 덮어쓰지 않고
+경고 후 건너뛴다. 레포 관리로 편입하려면 `commands/`로 옮기고 재실행.
 
 ## 스킬 목록
 

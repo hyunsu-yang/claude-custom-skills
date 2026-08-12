@@ -3,6 +3,7 @@
 ## Project Structure
 
 ```
+commands/       → installed to ~/.claude/commands/ (slash commands)
 skills/
   global/       → installed to ~/.claude/skills/ (all projects)
   tradingapp/   → installed to <project>/.claude/skills/ (project-specific)
@@ -40,9 +41,22 @@ bash install.sh --project tradingapp /path/to/proj  # 프로젝트 스킬 심볼
 - 스킬 추가 후 README.md 테이블 업데이트
 - 새 프로젝트 스코프 추가 시: `skills/<scope>/` 폴더 생성
 
+## Command Authoring
+
+`commands/*.md` → `~/.claude/commands/`에 심볼릭 링크 → `/<파일명>`으로 호출.
+
+- 형식: 프론트매터 없이 H1 제목 + `$ARGUMENTS` + 절차 (기존 `~/.claude/commands/` 컨벤션)
+- **스킬 진입점 역할** — 스킬 이름이 전문 용어라 잊기 쉬울 때 기억하기 쉬운 커맨드로
+  감싼다. 예: `c4-model` 스킬 ← `/arch-doc`("아키텍처 문서") + `/c4` 별칭.
+  별칭은 본 파일의 절차를 참조하고 핵심만 요약 (중복 최소화)
+- `install.sh`는 이 레포가 관리하지 않는 실물 파일을 **덮어쓰지 않고 경고 후 건너뛴다**
+  — `~/.claude/commands/`에 수동 작성한 커맨드가 이미 있기 때문
+- 커맨드 추가 후 README 커맨드 테이블 업데이트
+
 ## Install Mechanism
 
-`install.sh`는 복사가 아닌 심볼릭 링크 생성 — 설치된 경로가 아닌 `skills/` 소스 직접 편집
+`install.sh`는 복사가 아닌 심볼릭 링크 생성 — 설치된 경로가 아닌 `skills/`·`commands/`
+소스 직접 편집
 
 ## 외부 스킬 vendoring 규칙
 

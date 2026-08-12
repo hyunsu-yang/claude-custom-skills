@@ -57,6 +57,13 @@ diff를 직접 읽고 판단한 뒤 반영. 자동 pull 하지 않는다.
 | `mode-review.md` | 기존 다이어그램 비평 |
 | `mode-update.md` | 기존 C4 갱신 |
 
-슬래시 커맨드가 필요해지면 이 레포 컨벤션(심볼릭 링크)에 맞춰 직접 작성.
-upstream `commands/*.md`가 참고 템플릿 — 각 ~20줄 얇은 래퍼로, mode 파일 로드 +
-단계 나열이 전부다.
+## 슬래시 커맨드 (자체 작성)
+
+upstream `commands/`는 가져오지 않고, 이 레포에서 직접 작성했다:
+
+- `commands/arch-doc.md` → `/arch-doc` (주 진입점)
+- `commands/c4.md` → `/c4` (별칭)
+
+"C4"라는 용어를 잊어도 `/arch-doc`("아키텍처 문서")로 찾을 수 있게 하려는 의도.
+upstream 래퍼와 달리 스킬 파일 경로를 `~/.claude/skills/c4-model/`로 맞추고,
+Assumptions 분리·`.env` 미접근 등 지켜야 할 규칙을 커맨드 본문에 명시했다.
